@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D2935444EBDF6ACD6326B1C /* Pods_PagingExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7F10E4E3D05E7D9EB5D6F2 /* Pods_PagingExam.framework */; };
 		7DE3F0DC211EB6F5000C73DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F0DB211EB6F5000C73DA /* AppDelegate.swift */; };
 		7DE3F0DE211EB6F5000C73DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F0DD211EB6F5000C73DA /* ViewController.swift */; };
 		7DE3F0E1211EB6F5000C73DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3F0DF211EB6F5000C73DA /* Main.storyboard */; };
@@ -34,6 +35,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A7F10E4E3D05E7D9EB5D6F2 /* Pods_PagingExam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PagingExam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1CB438E75E0C4D0B886B98BF /* Pods-PagingExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagingExam.release.xcconfig"; path = "Pods/Target Support Files/Pods-PagingExam/Pods-PagingExam.release.xcconfig"; sourceTree = "<group>"; };
 		7DE3F0D8211EB6F5000C73DA /* PagingExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagingExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE3F0DB211EB6F5000C73DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DE3F0DD211EB6F5000C73DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +50,7 @@
 		7DE3F0F7211EB6F7000C73DA /* PagingExamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagingExamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE3F0FB211EB6F7000C73DA /* PagingExamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingExamUITests.swift; sourceTree = "<group>"; };
 		7DE3F0FD211EB6F7000C73DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5013EE469049A7126BE05C1 /* Pods-PagingExam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagingExam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PagingExam/Pods-PagingExam.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D2935444EBDF6ACD6326B1C /* Pods_PagingExam.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -74,6 +79,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		006EC950BA9D516FC463CF87 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B5013EE469049A7126BE05C1 /* Pods-PagingExam.debug.xcconfig */,
+				1CB438E75E0C4D0B886B98BF /* Pods-PagingExam.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		7DE3F0CF211EB6F5000C73DA = {
 			isa = PBXGroup;
 			children = (
@@ -81,6 +95,8 @@
 				7DE3F0EF211EB6F7000C73DA /* PagingExamTests */,
 				7DE3F0FA211EB6F7000C73DA /* PagingExamUITests */,
 				7DE3F0D9211EB6F5000C73DA /* Products */,
+				006EC950BA9D516FC463CF87 /* Pods */,
+				CC1D0C9AC4F97A3E6F9EDC93 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +141,14 @@
 			path = PagingExamUITests;
 			sourceTree = "<group>";
 		};
+		CC1D0C9AC4F97A3E6F9EDC93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0A7F10E4E3D05E7D9EB5D6F2 /* Pods_PagingExam.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +156,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7DE3F100211EB6F7000C73DA /* Build configuration list for PBXNativeTarget "PagingExam" */;
 			buildPhases = (
+				5E58D0F5D7A6B357BEA37FCC /* [CP] Check Pods Manifest.lock */,
 				7DE3F0D4211EB6F5000C73DA /* Sources */,
 				7DE3F0D5211EB6F5000C73DA /* Frameworks */,
 				7DE3F0D6211EB6F5000C73DA /* Resources */,
+				1B3B88929E559740515AB7F2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -250,6 +276,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1B3B88929E559740515AB7F2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-PagingExam/Pods-PagingExam-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PagingExam/Pods-PagingExam-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5E58D0F5D7A6B357BEA37FCC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PagingExam-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7DE3F0D4211EB6F5000C73DA /* Sources */ = {
@@ -428,15 +495,14 @@
 		};
 		7DE3F101211EB6F7000C73DA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B5013EE469049A7126BE05C1 /* Pods-PagingExam.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExam/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.pagingexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -446,15 +512,14 @@
 		};
 		7DE3F102211EB6F7000C73DA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1CB438E75E0C4D0B886B98BF /* Pods-PagingExam.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExam/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.pagingexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -470,11 +535,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -491,11 +552,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -511,11 +568,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -531,11 +584,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
