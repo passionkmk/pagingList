@@ -9,12 +9,12 @@
 /* Begin PBXBuildFile section */
 		5D2935444EBDF6ACD6326B1C /* Pods_PagingExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7F10E4E3D05E7D9EB5D6F2 /* Pods_PagingExam.framework */; };
 		7DE3F0DC211EB6F5000C73DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F0DB211EB6F5000C73DA /* AppDelegate.swift */; };
-		7DE3F0DE211EB6F5000C73DA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F0DD211EB6F5000C73DA /* ViewController.swift */; };
 		7DE3F0E1211EB6F5000C73DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3F0DF211EB6F5000C73DA /* Main.storyboard */; };
 		7DE3F0E3211EB6F7000C73DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3F0E2211EB6F7000C73DA /* Assets.xcassets */; };
 		7DE3F0E6211EB6F7000C73DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3F0E4211EB6F7000C73DA /* LaunchScreen.storyboard */; };
 		7DE3F0F1211EB6F7000C73DA /* PagingExamTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F0F0211EB6F7000C73DA /* PagingExamTests.swift */; };
 		7DE3F0FC211EB6F7000C73DA /* PagingExamUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F0FB211EB6F7000C73DA /* PagingExamUITests.swift */; };
+		7DE3F10A211EBFB4000C73DA /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F109211EBFB4000C73DA /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +39,6 @@
 		1CB438E75E0C4D0B886B98BF /* Pods-PagingExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagingExam.release.xcconfig"; path = "Pods/Target Support Files/Pods-PagingExam/Pods-PagingExam.release.xcconfig"; sourceTree = "<group>"; };
 		7DE3F0D8211EB6F5000C73DA /* PagingExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagingExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE3F0DB211EB6F5000C73DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7DE3F0DD211EB6F5000C73DA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7DE3F0E0211EB6F5000C73DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7DE3F0E2211EB6F7000C73DA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7DE3F0E5211EB6F7000C73DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -50,6 +49,7 @@
 		7DE3F0F7211EB6F7000C73DA /* PagingExamUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagingExamUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE3F0FB211EB6F7000C73DA /* PagingExamUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingExamUITests.swift; sourceTree = "<group>"; };
 		7DE3F0FD211EB6F7000C73DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7DE3F109211EBFB4000C73DA /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		B5013EE469049A7126BE05C1 /* Pods-PagingExam.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagingExam.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PagingExam/Pods-PagingExam.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,8 +114,8 @@
 			isa = PBXGroup;
 			children = (
 				7DE3F0DB211EB6F5000C73DA /* AppDelegate.swift */,
-				7DE3F0DD211EB6F5000C73DA /* ViewController.swift */,
 				7DE3F0DF211EB6F5000C73DA /* Main.storyboard */,
+				7DE3F109211EBFB4000C73DA /* MainViewController.swift */,
 				7DE3F0E2211EB6F7000C73DA /* Assets.xcassets */,
 				7DE3F0E4211EB6F7000C73DA /* LaunchScreen.storyboard */,
 				7DE3F0E7211EB6F7000C73DA /* Info.plist */,
@@ -323,8 +323,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7DE3F0DE211EB6F5000C73DA /* ViewController.swift in Sources */,
 				7DE3F0DC211EB6F5000C73DA /* AppDelegate.swift in Sources */,
+				7DE3F10A211EBFB4000C73DA /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -502,7 +502,10 @@
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.pagingexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -519,7 +522,10 @@
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.pagingexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -535,7 +541,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -552,7 +562,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -568,7 +582,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -584,7 +602,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
