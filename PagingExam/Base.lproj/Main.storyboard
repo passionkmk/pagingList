@@ -30,12 +30,12 @@
         <!--App Store Search-->
         <scene sceneID="PmS-cm-cPH">
             <objects>
-                <viewController id="5m6-pN-BqF" sceneMemberID="viewController">
+                <viewController id="5m6-pN-BqF" customClass="MainViewController" customModule="PagingExam" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="XCw-2M-ifF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="41U-ur-KoU">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="41U-ur-KoU">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableHeaderView" contentMode="scaleToFill" id="FjA-mc-QLO" userLabel="Search Hearder View">
@@ -46,7 +46,10 @@
                                             <rect key="frame" x="16" y="7" width="343" height="30"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="5m6-pN-BqF" id="5lQ-yV-JkN"/>
+                                            </connections>
                                         </textField>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,7 +60,7 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="68" id="bpd-RV-BZO">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="68" id="bpd-RV-BZO" customClass="TableViewCell" customModule="PagingExam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bpd-RV-BZO" id="EoU-ZT-7cN">
@@ -95,8 +98,16 @@
                                                 <constraint firstItem="kVd-e3-4Rs" firstAttribute="centerY" secondItem="EoU-ZT-7cN" secondAttribute="centerY" id="x4w-d9-WTe"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="subTitleLabel" destination="7sy-5I-FhE" id="2bO-cY-k9m"/>
+                                            <outlet property="thumbnailImageView" destination="kVd-e3-4Rs" id="OcT-3W-ATb"/>
+                                            <outlet property="titleLabel" destination="8T2-Hh-nzc" id="sND-vm-mEP"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="5m6-pN-BqF" id="r1L-Wp-5IT"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -109,8 +120,16 @@
                         <viewLayoutGuide key="safeArea" id="nC7-xv-o61"/>
                     </view>
                     <navigationItem key="navigationItem" title="App Store Search" id="vwy-vG-UEd">
-                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="hwQ-hK-pr4"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="hwQ-hK-pr4">
+                            <connections>
+                                <action selector="search:" destination="5m6-pN-BqF" id="uZJ-xo-Yi4"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="searchTextField" destination="nh3-BF-bmO" id="eLy-SO-7VK"/>
+                        <outlet property="tableView" destination="41U-ur-KoU" id="9XN-eR-HTe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMi-oE-C5l" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
