@@ -10,6 +10,7 @@
 		5D2935444EBDF6ACD6326B1C /* Pods_PagingExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7F10E4E3D05E7D9EB5D6F2 /* Pods_PagingExam.framework */; };
 		7D8C6DCD2126BC6000856EA6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C6DCC2126BC6000856EA6 /* TableViewCell.swift */; };
 		7D8C6DD02126BEED00856EA6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C6DCF2126BEED00856EA6 /* DataModel.swift */; };
+		7D8C6DD2212C2BBC00856EA6 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C6DD1212C2BBC00856EA6 /* ResultType.swift */; };
 		7DE3F0DC211EB6F5000C73DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F0DB211EB6F5000C73DA /* AppDelegate.swift */; };
 		7DE3F0E1211EB6F5000C73DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3F0DF211EB6F5000C73DA /* Main.storyboard */; };
 		7DE3F0E3211EB6F7000C73DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3F0E2211EB6F7000C73DA /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 		1CB438E75E0C4D0B886B98BF /* Pods-PagingExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagingExam.release.xcconfig"; path = "Pods/Target Support Files/Pods-PagingExam/Pods-PagingExam.release.xcconfig"; sourceTree = "<group>"; };
 		7D8C6DCC2126BC6000856EA6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		7D8C6DCF2126BEED00856EA6 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		7D8C6DD1212C2BBC00856EA6 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		7DE3F0D8211EB6F5000C73DA /* PagingExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagingExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE3F0DB211EB6F5000C73DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DE3F0E0211EB6F5000C73DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -112,6 +114,7 @@
 			isa = PBXGroup;
 			children = (
 				7D8C6DCF2126BEED00856EA6 /* DataModel.swift */,
+				7D8C6DD1212C2BBC00856EA6 /* ResultType.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -353,6 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D8C6DD2212C2BBC00856EA6 /* ResultType.swift in Sources */,
 				7D8C6DCD2126BC6000856EA6 /* TableViewCell.swift in Sources */,
 				7D8C6DD02126BEED00856EA6 /* DataModel.swift in Sources */,
 				7DE3F0DC211EB6F5000C73DA /* AppDelegate.swift in Sources */,

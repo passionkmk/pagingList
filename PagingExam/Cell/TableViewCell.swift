@@ -8,6 +8,7 @@
 
 import UIKit
 
+// MARK: - Overrieds
 class TableViewCell: UITableViewCell {
     
     @IBOutlet weak var thumbnailImageView: UIImageView!
@@ -16,6 +17,14 @@ class TableViewCell: UITableViewCell {
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        
+    }
+}
+
+// MARK: - Functions
+extension TableViewCell {
+    func loadCell (_ data: AppData) {
+        // TODO: - ImageView URL Session Add
+        self.titleLabel.text = data.title
+        self.subTitleLabel.text = data.subTitle
     }
 }

@@ -15,8 +15,8 @@ struct AppData {
     let subTitle: String
     
     init(_ data: JSON) {
-        self.thumbnailUrl = ""
-        self.title = ""
-        self.subTitle = ""
+        self.thumbnailUrl = data["artworkUrl100"].stringValue
+        self.title = data["trackName"].stringValue
+        self.subTitle = data["description"].stringValue
     }
 }

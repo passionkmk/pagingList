@@ -60,14 +60,14 @@
                                     </constraints>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" rowHeight="68" id="bpd-RV-BZO" customClass="TableViewCell" customModule="PagingExam" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="TableViewCell" rowHeight="68" id="bpd-RV-BZO" customClass="TableViewCell" customModule="PagingExam" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="68"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bpd-RV-BZO" id="EoU-ZT-7cN">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="67.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kVd-e3-4Rs">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kVd-e3-4Rs">
                                                     <rect key="frame" x="16" y="8" width="51.5" height="51.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" secondItem="kVd-e3-4Rs" secondAttribute="height" multiplier="1:1" id="RQ0-gU-Q56"/>
@@ -109,12 +109,21 @@
                                     <outlet property="dataSource" destination="5m6-pN-BqF" id="r1L-Wp-5IT"/>
                                 </connections>
                             </tableView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLz-27-llF">
+                                <rect key="frame" x="16" y="334" width="344" height="0.0"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="lLz-27-llF" firstAttribute="centerX" secondItem="XCw-2M-ifF" secondAttribute="centerX" id="7TK-xy-Rby"/>
                             <constraint firstItem="41U-ur-KoU" firstAttribute="top" secondItem="nC7-xv-o61" secondAttribute="top" id="DbU-qp-WKq"/>
+                            <constraint firstItem="lLz-27-llF" firstAttribute="leading" secondItem="nC7-xv-o61" secondAttribute="leading" constant="16" id="WTE-Xd-TxY"/>
                             <constraint firstItem="nC7-xv-o61" firstAttribute="trailing" secondItem="41U-ur-KoU" secondAttribute="trailing" id="g1c-0d-7Yx"/>
                             <constraint firstItem="nC7-xv-o61" firstAttribute="bottom" secondItem="41U-ur-KoU" secondAttribute="bottom" id="miY-zl-vrI"/>
+                            <constraint firstItem="lLz-27-llF" firstAttribute="centerY" secondItem="XCw-2M-ifF" secondAttribute="centerY" id="o2l-c1-Tpy"/>
                             <constraint firstItem="41U-ur-KoU" firstAttribute="leading" secondItem="nC7-xv-o61" secondAttribute="leading" id="uI6-AD-AsM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="nC7-xv-o61"/>
@@ -127,6 +136,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+                        <outlet property="noResultLabel" destination="lLz-27-llF" id="mVT-ts-4dy"/>
                         <outlet property="searchTextField" destination="nh3-BF-bmO" id="eLy-SO-7VK"/>
                         <outlet property="tableView" destination="41U-ur-KoU" id="9XN-eR-HTe"/>
                     </connections>
