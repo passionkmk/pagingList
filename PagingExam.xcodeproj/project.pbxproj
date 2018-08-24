@@ -9,8 +9,11 @@
 /* Begin PBXBuildFile section */
 		5D2935444EBDF6ACD6326B1C /* Pods_PagingExam.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0A7F10E4E3D05E7D9EB5D6F2 /* Pods_PagingExam.framework */; };
 		7D8C6DCD2126BC6000856EA6 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C6DCC2126BC6000856EA6 /* TableViewCell.swift */; };
-		7D8C6DD02126BEED00856EA6 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C6DCF2126BEED00856EA6 /* DataModel.swift */; };
+		7D8C6DD02126BEED00856EA6 /* AppDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C6DCF2126BEED00856EA6 /* AppDataModel.swift */; };
 		7D8C6DD2212C2BBC00856EA6 /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C6DD1212C2BBC00856EA6 /* ResultType.swift */; };
+		7D8C6DD5212F8B0D00856EA6 /* Pageable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C6DD4212F8B0D00856EA6 /* Pageable.swift */; };
+		7D8C6DD8212F8B5D00856EA6 /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8C6DD6212F8B5D00856EA6 /* LoadingTableViewCell.swift */; };
+		7D8C6DD9212F8B5D00856EA6 /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7D8C6DD7212F8B5D00856EA6 /* LoadingTableViewCell.xib */; };
 		7DE3F0DC211EB6F5000C73DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DE3F0DB211EB6F5000C73DA /* AppDelegate.swift */; };
 		7DE3F0E1211EB6F5000C73DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3F0DF211EB6F5000C73DA /* Main.storyboard */; };
 		7DE3F0E3211EB6F7000C73DA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7DE3F0E2211EB6F7000C73DA /* Assets.xcassets */; };
@@ -41,8 +44,11 @@
 		0A7F10E4E3D05E7D9EB5D6F2 /* Pods_PagingExam.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PagingExam.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB438E75E0C4D0B886B98BF /* Pods-PagingExam.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PagingExam.release.xcconfig"; path = "Pods/Target Support Files/Pods-PagingExam/Pods-PagingExam.release.xcconfig"; sourceTree = "<group>"; };
 		7D8C6DCC2126BC6000856EA6 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
-		7D8C6DCF2126BEED00856EA6 /* DataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		7D8C6DCF2126BEED00856EA6 /* AppDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDataModel.swift; sourceTree = "<group>"; };
 		7D8C6DD1212C2BBC00856EA6 /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
+		7D8C6DD4212F8B0D00856EA6 /* Pageable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pageable.swift; sourceTree = "<group>"; };
+		7D8C6DD6212F8B5D00856EA6 /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		7D8C6DD7212F8B5D00856EA6 /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		7DE3F0D8211EB6F5000C73DA /* PagingExam.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PagingExam.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7DE3F0DB211EB6F5000C73DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7DE3F0E0211EB6F5000C73DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -105,6 +111,7 @@
 		7D813E3D2126BBAF00D5CF11 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				7D8C6DD1212C2BBC00856EA6 /* ResultType.swift */,
 				7DE3F109211EBFB4000C73DA /* MainViewController.swift */,
 			);
 			path = View;
@@ -113,10 +120,19 @@
 		7D8C6DCE2126BEC800856EA6 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				7D8C6DCF2126BEED00856EA6 /* DataModel.swift */,
-				7D8C6DD1212C2BBC00856EA6 /* ResultType.swift */,
+				7D8C6DCF2126BEED00856EA6 /* AppDataModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7D8C6DD3212F890800856EA6 /* Paging */ = {
+			isa = PBXGroup;
+			children = (
+				7D8C6DD4212F8B0D00856EA6 /* Pageable.swift */,
+				7D8C6DD6212F8B5D00856EA6 /* LoadingTableViewCell.swift */,
+				7D8C6DD7212F8B5D00856EA6 /* LoadingTableViewCell.xib */,
+			);
+			path = Paging;
 			sourceTree = "<group>";
 		};
 		7DE3F0CF211EB6F5000C73DA = {
@@ -144,6 +160,7 @@
 		7DE3F0DA211EB6F5000C73DA /* PagingExam */ = {
 			isa = PBXGroup;
 			children = (
+				7D8C6DD3212F890800856EA6 /* Paging */,
 				7D8C6DCE2126BEC800856EA6 /* Model */,
 				7D813E3C2126BB9F00D5CF11 /* Cell */,
 				7D813E3D2126BBAF00D5CF11 /* View */,
@@ -290,6 +307,7 @@
 			files = (
 				7DE3F0E6211EB6F7000C73DA /* LaunchScreen.storyboard in Resources */,
 				7DE3F0E3211EB6F7000C73DA /* Assets.xcassets in Resources */,
+				7D8C6DD9212F8B5D00856EA6 /* LoadingTableViewCell.xib in Resources */,
 				7DE3F0E1211EB6F5000C73DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,9 +376,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D8C6DD5212F8B0D00856EA6 /* Pageable.swift in Sources */,
 				7D8C6DD2212C2BBC00856EA6 /* ResultType.swift in Sources */,
 				7D8C6DCD2126BC6000856EA6 /* TableViewCell.swift in Sources */,
-				7D8C6DD02126BEED00856EA6 /* DataModel.swift in Sources */,
+				7D8C6DD8212F8B5D00856EA6 /* LoadingTableViewCell.swift in Sources */,
+				7D8C6DD02126BEED00856EA6 /* AppDataModel.swift in Sources */,
 				7DE3F0DC211EB6F5000C73DA /* AppDelegate.swift in Sources */,
 				7DE3F10A211EBFB4000C73DA /* MainViewController.swift in Sources */,
 			);
@@ -540,7 +560,10 @@
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.pagingexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -557,7 +580,10 @@
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExam/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.pagingexample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -573,7 +599,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -590,7 +620,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -606,7 +640,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -622,7 +660,11 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PUECPHWLNZ;
 				INFOPLIST_FILE = PagingExamUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.KimMinKu.PagingExamUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

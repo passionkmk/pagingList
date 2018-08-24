@@ -1,5 +1,5 @@
 //
-//  DataModel.swift
+//  AppDataModel.swift
 //  PagingExam
 //
 //  Created by KimMinKu on 2018. 8. 17..
