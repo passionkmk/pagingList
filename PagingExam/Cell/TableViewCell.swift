@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 // MARK: - Overrieds
 class TableViewCell: UITableViewCell {
@@ -23,7 +24,8 @@ class TableViewCell: UITableViewCell {
 // MARK: - Functions
 extension TableViewCell {
     func loadCell (_ data: AppData) {
-        // TODO: - ImageView URL Session Add
+        let imageUrl = URL(string: data.thumbnailUrl)
+        self.thumbnailImageView.kf.setImage(with: imageUrl)
         self.titleLabel.text = data.title
         self.subTitleLabel.text = data.subTitle
     }
