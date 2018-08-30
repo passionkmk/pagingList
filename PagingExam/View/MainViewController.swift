@@ -95,6 +95,7 @@ extension MainViewController {
     
     func reset() {
         self.appDatas.removeAll()
+        self.tableView.reloadData()
     }
 }
 
@@ -116,7 +117,11 @@ extension MainViewController: UITableViewDataSource {
 
 // MARK: - UITextField Delegate
 extension MainViewController: UITextFieldDelegate {
-    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        self.loadData()
+        return true
+    }
 }
 
 
