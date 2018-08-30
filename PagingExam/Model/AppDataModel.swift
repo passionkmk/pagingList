@@ -9,6 +9,7 @@
 import Foundation
 import SwiftyJSON
 
+// MARK: - Init
 struct AppData {
     let thumbnailUrl: String
     let title: String

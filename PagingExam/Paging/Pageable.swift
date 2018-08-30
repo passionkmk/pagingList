@@ -15,6 +15,7 @@ protocol Pageable: class {
     var currentCount: Int { get }
     var isShouldShowLoadingCell: Bool { get set }
     func fetchNextPage()
+    func initLoadingTableCell(tableView: UITableView)
     func reset()
 }
 

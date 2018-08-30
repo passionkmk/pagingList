@@ -107,6 +107,7 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="5m6-pN-BqF" id="r1L-Wp-5IT"/>
+                                    <outlet property="delegate" destination="5m6-pN-BqF" id="0ux-Yd-hk0"/>
                                 </connections>
                             </tableView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lLz-27-llF">

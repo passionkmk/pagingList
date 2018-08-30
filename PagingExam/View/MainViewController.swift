@@ -11,7 +11,7 @@ import Alamofire
 import SwiftyJSON
 
 // MARK: - Overrides
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, Pageable {
     
     @IBOutlet weak var searchTextField: UITextField!
     @IBOutlet weak var tableView: UITableView!
@@ -20,8 +20,15 @@ class MainViewController: UIViewController {
     var appDatas: [AppData] = Array<AppData>()
     var resultType: ResultType = .ok
     
+    // Pageable Value
+    var currentPage: Int = 0
+    var pagePerCount: Int { return 10 }
+    var currentCount: Int { return self.appDatas.count }
+    var isShouldShowLoadingCell: Bool = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.initLoadingTableCell(tableView: self.tableView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -34,14 +41,17 @@ class MainViewController: UIViewController {
     }
 }
 
-// MARK: - Value
+// MARK: - Paging Function
 extension MainViewController {
-    var count: String {
-        return "10"
+    func fetchNextPage() {
+        self.currentPage += 1
+        self.loadData()
     }
     
-    var page: String {
-        return "1"
+    func reset() {
+        self.currentPage = 0
+        self.appDatas.removeAll()
+        self.loadData()
     }
 }
 
@@ -49,7 +59,6 @@ extension MainViewController {
 extension MainViewController {
     @IBAction func search(_ sender: UIBarButtonItem) {
         self.reset()
-        self.loadData()
     }
 }
 
@@ -57,61 +66,80 @@ extension MainViewController {
 extension MainViewController {
     func loadData() {
         guard let keyword: String = self.searchTextField.text, keyword.count > 0 else {
-            self.resultType = .searchKeywordEmpty
-            self.reset()
-            self.setStatus()
+            self.setResultUI(type: .searchKeywordEmpty)
             return
         }
         let path = "https://itunes.apple.com/search"
-        let param: [String: String] = ["term": keyword, "limit": self.count, "country": "KR", "media": "software", "entity": "software", "offset": self.page]
+        // TODO: - Offset keyword maybe wrong.
+        let param: [String: String] = ["term": keyword, "limit": String(self.pagePerCount), "country": "KR", "media": "software", "entity": "software", "offset": String(self.currentPage)]
         Alamofire.request(path, method: .get, parameters: param).responseJSON { (r) in
             if let error = r.error {
-                self.resultType = .connectionFailed
-                self.reset()
-                self.setStatus()
+                self.setResultUI(type: .connectionFailed)
                 print(error)
                 return
             }
             
             guard let object = r.result.value else {
-                self.resultType = .connectionFailed
-                self.reset()
-                self.setStatus()
+                self.setResultUI(type: .connectionFailed)
                 return
             }
             
             let data = JSON(object)
-            print(data)
+            print(param)
             let results = data["results"].arrayValue
-            self.appDatas = results.map{ AppData($0) }
+            if results.count == 0 && self.appDatas.count == 0 {
+                self.setResultUI(type: .noResult)
+                return
+            }
+            self.isShouldShowLoadingCell = results.count == self.pagePerCount
+            self.appDatas += results.map{ AppData($0) }
             self.tableView.reloadData()
         }
+    }
+    
+    func setResultUI(type: ResultType) {
+        self.resultType = type
+        self.clear()
+        self.setStatus()
+    }
+    
+    func clear() {
+        self.currentPage = 0
+        self.appDatas.removeAll()
+        self.tableView.reloadData()
     }
     
     func setStatus() {
         self.noResultLabel.isHidden = self.resultType.isHiddenNoResultLabel
         self.noResultLabel.text = self.resultType.description
     }
-    
-    func reset() {
-        self.appDatas.removeAll()
-        self.tableView.reloadData()
-    }
 }
 
 // MARK: - UITableView Datasource
 extension MainViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.appDatas.count
+        return self.isShouldShowLoadingCell ? self.appDatas.count + 1 : self.appDatas.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as? TableViewCell else {
-            return UITableViewCell()
+        if indexPath.row == self.appDatas.count {
+            return self.isShouldShowLoadingCell ? self.getLodingTableCell(tableView: tableView) : UITableViewCell()
         }
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCell", for: indexPath) as! TableViewCell
         let data = self.appDatas[indexPath.row]
         cell.loadCell(data)
         return cell
+    }
+}
+
+// MARK: - UITableView Delegate
+extension MainViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard self.isLoadingIndexPath(indexPath) else {
+            return
+        }
+        self.fetchNextPage()
     }
 }
 
@@ -119,7 +147,7 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        self.loadData()
+        self.reset()
         return true
     }
 }
