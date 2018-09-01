@@ -6,3 +6,4 @@
 + Library
   - Alamofire
   - SwiftyJSON
+  - Kingfisher
